@@ -98,11 +98,11 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtml) {
       var randomCategory = chooseRandomCategory(categories);
-      console.log(randomCategory);
+      //console.log(randomCategory);
       var chosenCategoryShortName = "'" + randomCategory.short_name + "'";
-      console.log(chosenCategoryShortName);
+      //console.log(chosenCategoryShortName);
       homeHtml=insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
-      console.log(homeHtml);
+      //console.log(homeHtml);
 
 
 
