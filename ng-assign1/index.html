@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lunch Checker</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="./angular.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <style>
+    body {
+      font-family:'Open Sans', sans-serif;
+    }
+    </style>
+  </head>
+  <body  ng-app="lunchCheckerApp">
+    <div class="container" ng-controller="lunchCheckerController">
+      <h2>Lunch Checker</h2>
+      <div class="form-group">
+        <input type="text" name="lunch-menu" title="lunch menu"
+        placeholder="Enter your luch items seperated by commas here"
+        class="form-control" ng-model="lunchItems">  
+        <div><br>Empty items ', ,' are not considered in the count</div>     
+      </div>
+      <div class="form-group">
+        <button name="tooMuch button" title="check if too much" class="btn btn-default" ng-click="checkIfOK();">Check if too much</button>
+      </div>
+      <div class="form-group">{{message}}</div>
+    </div>
+
+  </body>
+</html>
